@@ -9,6 +9,8 @@ class ViberSender extends Sender {
       this.notifyAdd(...arg);
     });
     pubSub.subscribe("basket:remove", this.notifyRemove);
+    pubSub.unsubscribe("basket:remove", this.notifyRemove);
+
   }
 
   notifyAdd(...args) {

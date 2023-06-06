@@ -1,4 +1,6 @@
 import Basket from './basket.js';
+import pubSub from "./pubsub.js";
+
 import './subscribers/telegram.js';
 import './subscribers/viber.js';
 
@@ -19,6 +21,7 @@ function main() {
 
 
     basket.addToBasket({ title: "Harry Potter", price: 22, id: 1 });
+    console.log(pubSub.subscribers);
 }
 
 
